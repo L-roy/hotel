@@ -568,13 +568,14 @@ a {
 }
 
 .about__text {
-    margin: 20px;
+    padding: 20px 40px;
     width: 50%;
+    min-width: 480px;
 }
 
 .about__pic {
     width: 50%;
-    margin-top: 20px;
+    min-width: 680px;
 }
 
 .about__pic img {
@@ -592,6 +593,7 @@ a {
     }
     .about__text {
         width: 100%;
+        min-width: auto;
     }
 }
 
