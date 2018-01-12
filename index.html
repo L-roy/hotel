@@ -8,11 +8,29 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="js/_lib/lodash.js"></script>
     <script type="text/javascript" src="js/slider.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.sliderHeadline').bxSlider({
+            controls: false,
+            auto: true,
+            pager: false,
+            wrapperClass: "no-bxwrapper"
+        });
+    });
+    </script>
     <script type="text/template" data-name="HomePage">
         <section id="homepage" class="homepage">
-            <img class="image-headliner" src="img/headline.png" alt="Valeria's Secret Hotel">
+            <div class="sliderHeadline">
+                <img class="image-headliner" src="img/headline.png" alt="Valeria's Secret Hotel">
+                <img class="image-headliner" src="img/headline2.png" alt="Valeria's Secret Hotel">
+                <img class="image-headliner" src="img/headline3.png" alt="Valeria's Secret Hotel">
+                <img class="image-headliner" src="img/headline4.png" alt="Valeria's Secret Hotel">
+            </div>
             <div class="booking-form">
                 <div class="booking-form__name">
                     <h2><i class="fa fa-bed"></i> Valeria's Secret Hotel</h2>
