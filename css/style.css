@@ -670,14 +670,12 @@ a {
     justify-content: flex-start;
 }
 
-.footer__contact-list__list__item>i {
-    margin: 5px 10px 0 0;
+.footer__contact-list__list__item> i {
+    margin: 5px 20px 0 0;
 }
 
 .footer__links {
     font-size: 24px;
-    padding-top: 16px;
-    padding-bottom: 16px;
 }
 
 .footer__links>i:hover {
