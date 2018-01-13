@@ -12,6 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="js/_lib/lodash.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript" src="js/slider.js"></script>
     <script>
     $(document).ready(function() {
@@ -77,7 +78,33 @@
                 </p>
             </div>
             <div class="rooms">
-                <div class="room">
+                <% _.forEach(roomsByType, function(currentRoom, index) { %>
+                    <div class="room">
+                        <div class="slider">
+                            <div class="slider__controls slider__controls--left" onclick="slideLeft(<%= index %>)">&#10094;</div>
+                            <div class="slider__controls slider__controls--right" onclick="slideRight(<%= index %>)">&#10095;</div>
+                            <ul class="slider__list" style="margin-left: 0;" id="<%= index %>">
+                                <% _.forEach(currentRoom.imgs, function(imgSrc) { %>
+                                    <li class="slider__list__item"><img class="room__img" src="<%= imgSrc %>" alt="<%= currentRoom.roomType %>"></li>
+                                <% }); %>
+                            </ul>
+                        </div>
+                        <div class="room__description">
+                            <h3><%= currentRoom.roomType %> Room</h3>
+                            <h6 class="room__price">From $<%= currentRoom.price %></h6>
+                            <p><%= currentRoom.bedType %> bed</p>
+                            <p><%= currentRoom.roomSize %>m<sup>2</sup></p>
+                            <p class="room__signs"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
+                            <% if (currentRoom.isAvaliable) { %>
+                                <button class="room__button">Choose Room</button>
+                            <% } else { %>
+                                <button class="room__button room__button--unavailable">Room unavailable</button>
+                            <% }%>
+                        </div>
+                    </div>
+                <% }); %>
+
+<!--                 <div class="room">
                     <div class="slider">
                         <div class="slider__controls slider__controls--left" onclick="slideLeft('slider1')">&#10094;</div>
                         <div class="slider__controls slider__controls--right" onclick="slideRight('slider1')">&#10095;</div>
@@ -140,7 +167,7 @@
                         </p>
                         <button class="room__button">Choose Room</button>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
     </script>
@@ -253,38 +280,19 @@
         </section>
     </script>
     <script type="text/template" data-name="Gallery">
-        <section class="gallery" id="gallery">
-            <div class="about__text">
-                <h3>About</h3>
-                <p>Located on the sophisticated, fashionable Seminyak beach, Valeriia's Secret Hotel, Bali is spread
-                    across fifteen acres of breathtaking tropical gardens. Unique amongst luxury hotels in Bali,
-                    our hotel grounds are dotted with ancient Balinese temples, where we still present daily offerings,
-                    and boast a natural stone amphitheatre, a private dining space and the only local venue for
-                    regular Balinese dance performances. Traditional Balinese thatch, natural stone and ornate
-                    wood carvings lend an authentic ambience to our luxury lanai rooms and villas. Guests looking
-                    for a luxury dining restaurant in Bali can choose from our traditional, thatched, open-air
-                    dining spaces, amphitheatre, beach side cafe and charming bar. Valeriia's Secret Hotel Spa
-                    in Bali is a wonderful setting to relax and unwind with a Balinese, Thai, Western or Oberoi
-                    signature treatment. On request, guests can also experience aqua Pilates and beachfront yoga
-                    in the hotel gardens. We offer all guests complimentary access to high speed Internet for up
-                    to four devices. Guests who book in advance and directly with us can also enjoy special rates,
-                    exclusive privileges and hotel offers. hotel offers. Relax with a loved one on a specially
-                    curated holiday or honeymoon. Host an intimate luxury wedding at one of our charming beach,
-                    garden or poolside wedding venues. Stay with Oberoi Hotels & Resorts in Bali for an unforgettable
-                    experience.
-                </p>
-                <div class="about__third"><i class="fa fa-map-marker"></i> Padangbai, Manggis, Karangasem Regency, Bali 80871, Indonesia</div>
-                <div class="about__third"><i class="fa fa-phone"></i> Phone: +00 123 45 67 890</div>
-                <div class="about__third"><i class="fa fa-envelope"></i> Email: info@valeriassecret.com</div>
-                <p>We accept: <i class="fa fa-credit-card"></i>
-                    <i class="fa fa-cc-mastercard"></i>
-                    <i class="fa fa-cc-amex"></i>
-                    <i class="fa fa-cc-visa"></i>
-                    <i class="fa fa-cc-paypal"></i></p>
-            </div>
-            <div class="about__pic">
-                <img src="img/about.png">
-            </div>
+        <section class="gallery">
+            <img src="img/gallerypictures/pic1.jpg">
+            <img src="img/gallerypictures/pic2.jpg">
+            <img src="img/gallerypictures/pic3.jpg">
+            <img src="img/gallerypictures/pic4.jpg">
+            <img src="img/gallerypictures/pic5.jpg">
+            <img src="img/gallerypictures/pic6.jpg">
+            <img src="img/gallerypictures/pic7.jpg">
+            <img src="img/gallerypictures/pic8.jpg">
+            <img src="img/gallerypictures/pic9.jpg">
+            <img src="img/gallerypictures/pic10.jpg">
+            <img src="img/gallerypictures/pic11.jpg">
+            <img src="img/gallerypictures/pic12.jpg">
         </section>
     </script>
     <script type="text/template" data-name="NotFound">
@@ -317,12 +325,12 @@
                 <li class="menubar__item menubar__item--logo"><a href="#!/"><i class="fa fa-bed"></i> Valeria's Secret</a></li>
                 <li class="menubar__item menubar__dropdown">
                     <label class="menubar__toggle" for="menubar__drop-1">Rooms +</label>
-                    <a href="#!/rooms">Rooms</a>
+                    <a href="#!/rooms/all">Rooms</a>
                     <input type="checkbox" id="menubar__drop-1" />
                     <ul class="menubar__dropdown-content">
-                        <li><a href="#!/rooms" class="menubar__dropdown-content__item">Standard</a></li>
-                        <li><a href="#!/rooms" class="menubar__dropdown-content__item">Superior</a></li>
-                        <li><a href="#!/rooms" class="menubar__dropdown-content__item">Deluxe</a></li>
+                        <li><a href="#!/rooms/Standard" class="menubar__dropdown-content__item">Standard</a></li>
+                        <li><a href="#!/rooms/Superior" class="menubar__dropdown-content__item">Superior</a></li>
+                        <li><a href="#!/rooms/Deluxe" class="menubar__dropdown-content__item">Deluxe</a></li>
                     </ul>
                 </li>
                 <li class="menubar__item"><a href="#!/services">Services</a></li>

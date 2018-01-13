@@ -80,7 +80,7 @@ a {
     top: 0;
     left: 0;
     z-index: 10000;
-    width: 100%;
+    width: 100%;    
     overflow: hidden;
     color: #000;
     background-color: rgba(255, 255, 255, 0.7);
@@ -409,12 +409,16 @@ a {
 }
 
 .rooms {
-    display: block
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .room {
-    float: left;
     width: 33.33333%;
+    min-width: 200px;
+    max-width: 500px;
     padding: 0 8px;
     margin-bottom: 16px;
     position: relative;
@@ -498,7 +502,6 @@ a {
     overflow: hidden;
     text-decoration: none;
     color: inherit;
-    background-color: inherit;
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
@@ -513,6 +516,12 @@ a {
     display: block;
     width: 100%;
     margin-bottom: 16px;
+}
+
+.room__button--unavailable {
+    color: #000;
+    background-color: #ccc;
+    cursor: default;
 }
 
 .room__button:hover {
@@ -597,6 +606,26 @@ a {
     }
 }
 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.gallery img {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    transition: all 1s ease;
+}
+
+.gallery img:hover {
+    width: 310px;
+    height: 310px;
+    box-shadow: 5px 10px rgba(2, 64, 89, 0.5);
+    margin: 15px;
+}
 
 .contact {
     padding: 0.01em 16px;
@@ -676,10 +705,11 @@ a {
 
 .footer__links {
     font-size: 24px;
+    cursor: pointer;
 }
 
 .footer__links>i:hover {
-    opacity: 0.60
+    opacity: 0.60;
 }
 
 .copyright {
