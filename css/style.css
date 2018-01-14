@@ -73,6 +73,7 @@ a {
 
 
 
+
 /*=======Menubar-------*/
 
 .menubar {
@@ -80,7 +81,7 @@ a {
     top: 0;
     left: 0;
     z-index: 10000;
-    width: 100%;    
+    width: 100%;
     overflow: hidden;
     color: #000;
     background-color: rgba(255, 255, 255, 0.7);
@@ -92,7 +93,6 @@ a {
     flex-wrap: wrap;
     flex-direction: row;
 }
-
 
 #content {
     margin-top: 45px;
@@ -182,6 +182,10 @@ a {
 
 [id^="menubar__drop"] {
     display: none;
+}
+
+.menubar__active {
+    color: rgba(117, 143, 24, 1);
 }
 
 @media screen and (min-width: 601px) {
@@ -362,7 +366,7 @@ a {
 
 .slider {
     overflow: hidden;
-    margin: 10px auto;
+    margin: 10px auto 0 auto;
     position: relative;
 }
 
@@ -413,6 +417,16 @@ a {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.rooms__controls {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rooms__controls>select {
+    margin: 0 10px;
 }
 
 .room {
@@ -536,6 +550,13 @@ a {
     }
 }
 
+select#roomSort {
+    color: #fff;
+    background-color: #779126;
+    border-radius: 20px;
+    padding-left: 15px;
+}
+
 .services-description {
     padding: 0.01em 16px;
 }
@@ -613,18 +634,44 @@ a {
     justify-content: space-around;
 }
 
+.gallery h3 {
+    display: flex;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0.01em 16px;
+}
+
 .gallery img {
     width: 300px;
     height: 300px;
     margin: 20px;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
 }
 
 .gallery img:hover {
     width: 310px;
     height: 310px;
-    box-shadow: 5px 10px rgba(2, 64, 89, 0.5);
+    box-shadow: 0px 0px 30px 0px rgba(2, 64, 89, 1);
     margin: 15px;
+}
+
+.gallery__page-numbers {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery__page-numbers a {
+    padding: 8px 16px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: rgba(2, 64, 89, 1);
+}
+
+.gallery__page-numbers a.active {
+    font-weight: bold;
+    background-color: rgba(2, 64, 89, 1);
+    color: white;
 }
 
 .contact {
@@ -699,7 +746,7 @@ a {
     justify-content: flex-start;
 }
 
-.footer__contact-list__list__item> i {
+.footer__contact-list__list__item>i {
     margin: 5px 20px 0 0;
 }
 

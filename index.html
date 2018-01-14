@@ -14,16 +14,6 @@
     <script src="js/_lib/lodash.js"></script>
     <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript" src="js/slider.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('.sliderHeadline').bxSlider({
-            controls: false,
-            auto: true,
-            pager: false,
-            wrapperClass: "no-bxwrapper"
-        });
-    });
-    </script>
     <script type="text/template" data-name="HomePage">
         <section id="homepage" class="homepage">
             <div class="sliderHeadline">
@@ -78,6 +68,13 @@
                 </p>
             </div>
             <div class="rooms">
+                <section class="rooms__controls">
+                    <label for="roomSort">Sort by</label>
+                    <select name="room-sort" id="roomSort">
+                        <option value="price">Price</option>
+                        <option value="roomSize">Room size</option>
+                    </select>
+                </section>
                 <% _.forEach(roomsByType, function(currentRoom, index) { %>
                     <div class="room">
                         <div class="slider">
@@ -96,7 +93,12 @@
                                 <%= currentRoom.bedType %> bed</p>
                             <p>
                                 <%= currentRoom.roomSize %>m<sup>2</sup></p>
-                            <p class="room__signs"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
+                            <p class="room__signs">
+                                <i class="fa fa-bath"></i> 
+                                <i class="fa fa-phone"></i> 
+                                <i class="fa fa-wifi"></i> 
+                                <i class="fa fa-tv"></i>
+                            </p>
                             <% if (currentRoom.isAvaliable) { %>
                                 <button class="room__button">Choose Room</button>
                                 <% } else { %>
@@ -105,70 +107,6 @@
                         </div>
                     </div>
                     <% }); %>
-                        <!--                 <div class="room">
-                    <div class="slider">
-                        <div class="slider__controls slider__controls--left" onclick="slideLeft('slider1')">&#10094;</div>
-                        <div class="slider__controls slider__controls--right" onclick="slideRight('slider1')">&#10095;</div>
-                        <ul class="slider__list" style="margin-left: 0;" id="slider1">
-                            <li class="slider__list__item"><img class="room__img" src="img/standard_room.png" alt="Standard"></li>
-                            <li class="slider__list__item"><img class="room__img" src="img/standard_room2.png" alt="Standard"></li>
-                            <li class="slider__list__item"><img class="room__img" src="img/standard_room3.png" alt="Standard"></li>
-                        </ul>
-                    </div>
-                    <div class="room__description">
-                        <h3>Standard Room</h3>
-                        <h6 class="room__price">From $99</h6>
-                        <p>Queen-size bed</p>
-                        <p>15m<sup>2</sup></p>
-                        <p class="room__signs"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
-                        <button class="room__button">Choose Room</button>
-                    </div>
-                </div>
-                <div class="room">
-                    <div class="slider">
-                        <div class="slider__controls slider__controls--left" onclick="slideLeft('slider2')">&#10094;</div>
-                        <div class="slider__controls slider__controls--right" onclick="slideRight('slider2')">&#10095;</div>
-                        <ul class="slider__list" style="margin-left: 0;" id="slider2">
-                            <li class="slider__list__item"><img class="room__img" src="img/superior_room.png" alt="Superior"></li>
-                            <li class="slider__list__item"><img class="room__img" src="img/superior_room2.png" alt="Superior"></li>
-                            <li class="slider__list__item"><img class="room__img" src="img/superior_room3.png" alt="Superior"></li>
-                        </ul>
-                    </div>
-                    <div class="room__description">
-                        <h3>Superior Room</h3>
-                        <h6 class="room__price">From $149</h6>
-                        <p>King-size bed</p>
-                        <p>25m<sup>2</sup></p>
-                        <p class="room__signs"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i></p>
-                        <button class="room__button">Choose Room</button>
-                    </div>
-                </div>
-                <div class="room">
-                    <div class="slider">
-                        <div class="slider__controls slider__controls--left" onclick="slideLeft('slider3')">&#10094;</div>
-                        <div class="slider__controls slider__controls--right" onclick="slideRight('slider3')">&#10095;</div>
-                        <ul class="slider__list" style="margin-left: 0;" id="slider3">
-                            <li class="slider__list__item"><img class="room__img" src="img/deluxe_room.png" alt="Deluxe"></li>
-                            <li class="slider__list__item"><img class="room__img" src="img/deluxe_room2.png" alt="Deluxe"></li>
-                            <li class="slider__list__item"><img class="room__img" src="img/deluxe_room3.png" alt="Deluxe"></li>
-                        </ul>
-                    </div>
-                    <div class="room__description">
-                        <h3>Deluxe Room</h3>
-                        <h6 class="room__price">From $199</h6>
-                        <p>King-size bed</p>
-                        <p>40m<sup>2</sup></p>
-                        <p class="room__signs">
-                            <i class="fa fa-bath"></i>
-                            <i class="fa fa-phone"></i>
-                            <i class="fa fa-wifi"></i>
-                            <i class="fa fa-tv"></i>
-                            <i class="fa fa-glass"></i>
-                            <i class="fa fa-cutlery"></i>
-                        </p>
-                        <button class="room__button">Choose Room</button>
-                    </div>
-                </div> -->
             </div>
         </section>
     </script>
@@ -221,7 +159,7 @@
     <script type="text/template" data-name="Contacts">
         <section id="contact">
             <div class="contact">
-                <h2>Contact</h2>
+                <h3>Contact</h3>
                 <p>If you have any questions, do not hesitate to ask them.</p>
                 <i class="fa fa-map-marker contact__icon"></i> Padangbai, Manggis, Karangasem Regency, Bali 80871,
                 Indonesia
@@ -282,9 +220,22 @@
     </script>
     <script type="text/template" data-name="Gallery">
         <section class="gallery">
-            <% _.forEach(gallery, function(currentPicture, index) { %>
+        <h3>Gallery</h3>
+            <% _.forEach(galleryPhotos, function(currentPicture, index) { %>
                 <img src="<%= currentPicture.img %>" alt="<%= currentPicture.name %>">
             <% }); %>
+            <section class="gallery__page-numbers">
+                <% var page = 0; %>
+                <% for(var i = 0; i < gallery.length; i += 12 ) { %>
+                    <% page++ %>
+                    <% if(page == pageNumber) { %>
+                        <a href="#!/gallery/<%= page %>"
+                            class="active"><%= page %></a>
+                    <% } else { %>
+                        <a href="#!/gallery/<%= page %>"><%= page %></a>
+                    <% } %>
+                <% } %>
+            </section>
         </section>
     </script>
     <script type="text/template" data-name="NotFound">
@@ -315,7 +266,7 @@
         <nav>
             <ul class="menubar" id="myMenubar">
                 <li class="menubar__item menubar__item--logo"><a href="#!/"><i class="fa fa-bed"></i> Valeria's Secret</a></li>
-                <li class="menubar__item menubar__dropdown">
+                <li class="menubar__item menubar__dropdown" id="menubarRooms">
                     <label class="menubar__toggle" for="menubar__drop-1">Rooms +</label>
                     <a href="#!/rooms/all">Rooms</a>
                     <input type="checkbox" id="menubar__drop-1" />
@@ -325,13 +276,12 @@
                         <li><a href="#!/rooms/Deluxe" class="menubar__dropdown-content__item">Deluxe</a></li>
                     </ul>
                 </li>
-                <li class="menubar__item"><a href="#!/services">Services</a></li>
-                <li class="menubar__item"><a href="#!/about">About</a></li>
-                <li class="menubar__item"><a href="#!/gallery">Gallery</a></li>
-                <li class="menubar__item"><a href="#!/contacts">Contacts</a></li>
+                <li class="menubar__item" id="menubarServices"><a href="#!/services">Services</a></li>
+                <li class="menubar__item" id="menubarAbout"><a href="#!/about">About</a></li>
+                <li class="menubar__item" id="menubarGallery"><a href="#!/gallery/1">Gallery</a></li>
+                <li class="menubar__item" id="menubarContacts"><a href="#!/contacts">Contacts</a></li>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
                 <a href="javascript:void(0);" class="cross" onclick="myFunction()">&#9747;</a>
-                <!-- event prevent default - ask Vitalik -->
             </ul>
         </nav>
         <script>
@@ -393,9 +343,9 @@
     </footer>
     <!-- footer end -->
     <script src="js/router/router.js"></script>
-    <script src="js/app.js"></script>
     <script type="text/javascript" src="js/hotelmap.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDF0p5E95jsZ09JzyVEUo8WAkZqxTrmj0s&callback=hotelMap"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
