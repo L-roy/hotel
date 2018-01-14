@@ -754,8 +754,11 @@ select#roomSort {
     font-size: 24px;
     cursor: pointer;
 }
+.footer__links a {
+    text-decoration: none;
+}
 
-.footer__links>i:hover {
+.footer__links>a:hover {
     opacity: 0.60;
 }
 
