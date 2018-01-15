@@ -1,0 +1,106 @@
+/* Homepage CSS*/
+
+.homepage {
+    position: relative;
+    max-width: auto;
+    min-height: 600px;
+}
+
+.image-headliner {
+    width: 100%;
+    min-width: 1200px;
+    height: auto;
+}
+
+.booking-form {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    padding: 8px 16px;
+    float: left;
+    width: 100%;
+}
+
+@media (min-width:601px) {
+    .booking-form {
+        width: 66%;
+    }
+}
+
+@media (min-width:993px) {
+    .booking-form {
+        width: 40%;
+    }
+}
+
+@media (max-width:600px) {
+    .booking-form {
+        width: 100%;
+        height: 70%;
+    }
+}
+
+.booking-form__name {
+    padding: 0.01em 16px;
+    color: #fff;
+    background-color: rgba(117, 143, 24, 1);
+}
+
+.booking-form__data {
+    padding: 0.01em 16px;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.booking-form__row {
+    padding: 0 8px;
+    margin: 0 -16px;
+}
+
+.booking-form__row-half {
+    float: left;
+    width: 50%;
+    padding: 0 8px;
+    margin-bottom: 16px;
+}
+
+.booking-form__input {
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.booking-form__button {
+    border: none;
+    display: inline-block;
+    outline: 0;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #fff;
+    background-color: #616161;
+}
+
+.booking-form__button:hover {
+    color: #000;
+    background-color: #ccc;
+}

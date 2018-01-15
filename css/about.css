@@ -1,0 +1,36 @@
+/*About CSS*/
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about__text {
+    padding: 20px 40px;
+    width: 50%;
+    min-width: 480px;
+}
+
+.about__pic {
+    width: 50%;
+    min-width: 680px;
+}
+
+.about__pic img {
+    width: 100%;
+}
+
+
+@media (max-width:600px) {
+    .about {
+        display: flex;
+        flex-direction: column;
+    }
+    .about__pic {
+        width: 100%;
+    }
+    .about__text {
+        width: 100%;
+        min-width: auto;
+    }
+}

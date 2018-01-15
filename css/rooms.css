@@ -1,0 +1,180 @@
+/* Rooms CSS*/
+
+.slider {
+    overflow: hidden;
+    margin: 10px auto 0 auto;
+    position: relative;
+}
+
+.slider__list {
+    width: 300%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    transition: margin-left 1s;
+    -webkit-transition: margin-left 1s;
+}
+
+.slider__list__item {
+    width: 100%;
+    border: 1px solid white;
+}
+
+.slider__controls {
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    user-select: none;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__controls--left {
+    left: 0;
+}
+
+.slider__controls--right {
+    right: 0;
+}
+
+.rooms-description {
+    padding: 0.01em 16px;
+    margin-top: 16px;
+}
+
+.rooms {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rooms__controls {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rooms__controls>select {
+    margin: 0 10px;
+}
+
+.room {
+    width: 33%;
+    min-width: 200px;
+    max-width: 500px;
+    padding: 0 8px;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+@media (max-width:600px) {
+    .room {
+        width: 100%;
+    }
+    .slider__controls {
+        width: 40px;
+    }
+}
+
+.room__button-left, .room__button-right {
+    border: none;
+    display: inline-block;
+    outline: 0;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    color: #fff;
+    background-color: transparent;
+    position: absolute;
+    font-size: 24px;
+    top: 0;
+}
+
+.room__button-left {
+    left: 0;
+}
+
+.room__button-right {
+    right: 0;
+}
+
+.room__img {
+    width: 100%;
+}
+
+.room__description {
+    padding: 0.01em 16px;
+    color: #000;
+    background-color: rgb(255, 255, 255);
+}
+
+.room__price {
+    opacity: 0.6;
+}
+
+.room__signs {
+    font-size: 18px;
+}
+
+.room__button {
+    border: none;
+    display: inline-block;
+    outline: 0;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #fff;
+    background-color: rgba(2, 64, 89, 1);
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.room__button--unavailable {
+    color: #000;
+    background-color: #ccc;
+    cursor: not-allowed; 
+}
+
+.room__button:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+@media (max-width:600px) {
+    .room__button {
+        padding: 16px 32px;
+        font-size: 20px;
+    }
+}
+
+#roomSort {
+    color: #fff;
+    background-color: #779126;
+    border-radius: 20px;
+    padding-left: 15px;
+}

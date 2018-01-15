@@ -13,8 +13,7 @@ function slide(step, listId, loop = false) {
 
     if (newMargin <= 0 && newMargin >= -(elementsCount - 1) * 100) {
         sliderList.style.marginLeft = newMargin + '%';
-    }
-    else if (loop) {
+    } else if (loop) {
     	sliderList.style.marginLeft = 0;
     }     	
 }

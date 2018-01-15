@@ -7,19 +7,20 @@
             controls: false,
             auto: true,
             pager: false,
-            wrapperClass: "no-bxwrapper"
+            wrapperClass: 'no-bxwrapper'
         });
     }
 
     function setActiveMenu(menuitemId) {
-        var menubar = document.getElementById("myMenubar");
-        var menubarItems = menubar.getElementsByClassName("menubar__item");
-        [].forEach.call(menubarItems, function(item) {
-            item.classList.remove("menubar__active");
-        });
+        var menubar = document.getElementById('myMenubar');
+        var menubarItem = menubar.getElementsByClassName('menubar__active')[0];
 
-        if (menuitemId != null) {
-            document.getElementById(menuitemId).classList.add("menubar__active");
+        if (menubarItem) {
+            menubarItem.classList.remove('menubar__active');
+        }
+
+        if (menuitemId) {
+            document.getElementById(menuitemId).classList.add('menubar__active');
         }
     }
 
@@ -29,6 +30,7 @@
 
     router.route('home', '/', function() {
         root.innerHTML = window.Templates.HomePage({ router: router });
+        
         createMainSlider();
         setActiveMenu(null);
     });
@@ -58,17 +60,19 @@
 
         }
 
-        setActiveMenu("menubarRooms");
+        setActiveMenu('menubarRooms');
     });
 
     router.route('services', '/services', function() {
         root.innerHTML = window.Templates.Services({ router: router });
-        setActiveMenu("menubarServices");
+
+        setActiveMenu('menubarServices');
     });
 
     router.route('about', '/about', function() {
         root.innerHTML = window.Templates.About({ router: router });
-        setActiveMenu("menubarAbout");
+
+        setActiveMenu('menubarAbout');
     });
 
     router.route('gallery', '/gallery/:pageNumber', function(pageNumber) {
@@ -81,16 +85,20 @@
             galleryPhotos = gallery.slice();
         }
 
-        root.innerHTML = window.Templates.Gallery({ router: router, galleryPhotos: galleryPhotos,
-            pageNumber: pageNumber });
+        root.innerHTML = window.Templates.Gallery({
+            router: router,
+            galleryPhotos: galleryPhotos,
+            pageNumber: pageNumber
+        });
 
-        setActiveMenu("menubarGallery");
+        setActiveMenu('menubarGallery');
     });
 
     router.route('contacts', '/contacts', function() {
         root.innerHTML = window.Templates.Contacts({ router: router });
+        
         hotelMap();
-        setActiveMenu("menubarContacts");
+        setActiveMenu('menubarContacts');
     });
 
 
@@ -104,3 +112,9 @@
         router.toPath(window.location.hash.slice(2));
     }, false);
 })()
+
+function toggleMenubar(event) {
+    event.preventDefault();
+    var x = document.getElementById('myMenubar');
+    x.classList.toggle('responsive');
+}
