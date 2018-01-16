@@ -3,11 +3,13 @@
     var router = new window.Router();
 
     function createMainSlider() {
-        $('.sliderHeadline').bxSlider({
-            controls: false,
-            auto: true,
-            pager: false,
-            wrapperClass: 'no-bxwrapper'
+        $(function() {
+            $('.sliderHeadline').bxSlider({
+                controls: false,
+                auto: true,
+                pager: false,
+                wrapperClass: 'no-bxwrapper'
+            })
         });
     }
 
