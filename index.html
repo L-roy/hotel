@@ -17,7 +17,7 @@
     <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript" src="js/slider.js"></script>
     
-<!-- Homepage template -->
+    <!-- Homepage template -->
     <script type="text/template" data-name="HomePage">
         <section id="homepage" class="homepage">
             <div class="sliderHeadline">
@@ -89,16 +89,14 @@
                             <ul class="slider__list" style="margin-left: 0;" id="<%= index %>">
                                 <% _.forEach(currentRoom.imgs, function(imgSrc) { %>
                                     <li class="slider__list__item"><img class="room__img" src="<%= imgSrc %>" alt="<%= currentRoom.roomType %>"></li>
-                                    <% }); %>
+                                <% }); %>
                             </ul>
                         </div>
                         <div class="room__description">
                             <h3><%= currentRoom.roomType %> Room</h3>
                             <h6 class="room__price">From $<%= currentRoom.price %></h6>
-                            <p>
-                                <%= currentRoom.bedType %> bed</p>
-                            <p>
-                                <%= currentRoom.roomSize %>m<sup>2</sup></p>
+                            <p><%= currentRoom.bedType %> bed</p>
+                            <p><%= currentRoom.roomSize %>m<sup>2</sup></p>
                             <p class="room__signs">
                                 <i class="fa fa-bath"></i> 
                                 <i class="fa fa-phone"></i> 
@@ -107,12 +105,12 @@
                             </p>
                             <% if (currentRoom.isAvaliable) { %>
                                 <button class="room__button">Choose Room</button>
-                                <% } else { %>
-                                    <button class="room__button room__button--unavailable">Room unavailable</button>
-                                    <% }%>
+                            <% } else { %>
+                                <button class="room__button room__button--unavailable">Room unavailable</button>
+                            <% }%>
                         </div>
                     </div>
-                    <% }); %>
+                <% }); %>
             </div>
         </section>
     </script>

@@ -616,20 +616,6 @@ var rooms = [
     ]
   },
   {
-    "_id": "5a5a6661fd7694bd17f93d67",
-    "isAvaliable": true,
-    "picture": "http://placehold.it/32x32",
-    "price": 317,
-    "roomType": "Standard",
-    "bedType": "King-size",
-    "roomSize": 23,
-    "imgs": [
-      "img/standard_room.png",
-      "img/standard_room2.png",
-      "img/standard_room3.png"
-    ]
-  },
-  {
     "_id": "5a5a6661eb641cfa9529dff0",
     "isAvaliable": true,
     "picture": "http://placehold.it/32x32",
@@ -655,76 +641,6 @@ var rooms = [
       "img/standard_room.png",
       "img/standard_room2.png",
       "img/standard_room3.png"
-    ]
-  },
-  {
-    "_id": "5a5a66618fe1761bbdee676c",
-    "isAvaliable": true,
-    "picture": "http://placehold.it/32x32",
-    "price": 253,
-    "roomType": "Standard",
-    "bedType": "Queen-size",
-    "roomSize": 34,
-    "imgs": [
-      "img/standard_room.png",
-      "img/standard_room2.png",
-      "img/standard_room3.png"
-    ]
-  },
-  {
-    "_id": "5a5a666146eba6d27f666143",
-    "isAvaliable": false,
-    "picture": "http://placehold.it/32x32",
-    "price": 388,
-    "roomType": "Superior",
-    "bedType": "Queen-size",
-    "roomSize": 17,
-    "imgs": [
-      "img/superior_room.png",
-      "img/superior_room2.png",
-      "img/superior_room3.png"
-    ]
-  },
-  {
-    "_id": "5a5a666155167184126390db",
-    "isAvaliable": false,
-    "picture": "http://placehold.it/32x32",
-    "price": 270,
-    "roomType": "Standard",
-    "bedType": "Queen-size",
-    "roomSize": 28,
-    "imgs": [
-      "img/standard_room.png",
-      "img/standard_room2.png",
-      "img/standard_room3.png"
-    ]
-  },
-  {
-    "_id": "5a5a6661af4e163fd4ee6874",
-    "isAvaliable": false,
-    "picture": "http://placehold.it/32x32",
-    "price": 280,
-    "roomType": "Superior",
-    "bedType": "King-size",
-    "roomSize": 40,
-    "imgs": [
-      "img/superior_room.png",
-      "img/superior_room2.png",
-      "img/superior_room3.png"
-    ]
-  },
-  {
-    "_id": "5a5a6661d33721b40a2e6c63",
-    "isAvaliable": false,
-    "picture": "http://placehold.it/32x32",
-    "price": 177,
-    "roomType": "Superior",
-    "bedType": "King-size",
-    "roomSize": 24,
-    "imgs": [
-      "img/superior_room.png",
-      "img/superior_room2.png",
-      "img/superior_room3.png"
     ]
   },
   {
@@ -784,34 +700,6 @@ var rooms = [
     ]
   },
   {
-    "_id": "5a5a6661f87a421cc9d44789",
-    "isAvaliable": true,
-    "picture": "http://placehold.it/32x32",
-    "price": 361,
-    "roomType": "Deluxe",
-    "bedType": "King-size",
-    "roomSize": 18,
-    "imgs": [
-      "img/deluxe_room.png",
-      "img/deluxe_room2.png",
-      "img/deluxe_room3.png"
-    ]
-  },
-  {
-    "_id": "5a5a6661e639d70d4e7b3700",
-    "isAvaliable": true,
-    "picture": "http://placehold.it/32x32",
-    "price": 248,
-    "roomType": "Standard",
-    "bedType": "King-size",
-    "roomSize": 16,
-    "imgs": [
-      "img/standard_room.png",
-      "img/standard_room2.png",
-      "img/standard_room3.png"
-    ]
-  },
-  {
     "_id": "5a5a6661bc8e8c5cad474ad0",
     "isAvaliable": true,
     "picture": "http://placehold.it/32x32",
@@ -854,38 +742,10 @@ var rooms = [
     ]
   },
   {
-    "_id": "5a5a6661ced563df380f05e9",
-    "isAvaliable": false,
-    "picture": "http://placehold.it/32x32",
-    "price": 345,
-    "roomType": "Deluxe",
-    "bedType": "Queen-size",
-    "roomSize": 35,
-    "imgs": [
-      "img/deluxe_room.png",
-      "img/deluxe_room2.png",
-      "img/deluxe_room3.png"
-    ]
-  },
-  {
     "_id": "5a5a66618d7a5f8dff123604",
     "isAvaliable": false,
     "picture": "http://placehold.it/32x32",
     "price": 246,
-    "roomType": "Superior",
-    "bedType": "King-size",
-    "roomSize": 50,
-    "imgs": [
-      "img/superior_room.png",
-      "img/superior_room2.png",
-      "img/superior_room3.png"
-    ]
-  },
-  {
-    "_id": "5a5a666125c1371b00fc020b",
-    "isAvaliable": false,
-    "picture": "http://placehold.it/32x32",
-    "price": 392,
     "roomType": "Superior",
     "bedType": "King-size",
     "roomSize": 50,
@@ -910,34 +770,6 @@ var rooms = [
     ]
   },
   {
-    "_id": "5a5a6661bbe8826e6d2ada50",
-    "isAvaliable": false,
-    "picture": "http://placehold.it/32x32",
-    "price": 142,
-    "roomType": "Standard",
-    "bedType": "Queen-size",
-    "roomSize": 36,
-    "imgs": [
-      "img/standard_room.png",
-      "img/standard_room2.png",
-      "img/standard_room3.png"
-    ]
-  },
-  {
-    "_id": "5a5a66614991ab8d40c84d22",
-    "isAvaliable": true,
-    "picture": "http://placehold.it/32x32",
-    "price": 321,
-    "roomType": "Standard",
-    "bedType": "Queen-size",
-    "roomSize": 29,
-    "imgs": [
-      "img/standard_room.png",
-      "img/standard_room2.png",
-      "img/standard_room3.png"
-    ]
-  },
-  {
     "_id": "5a5a6661a1648c277e3ce1be",
     "isAvaliable": true,
     "picture": "http://placehold.it/32x32",
@@ -949,34 +781,6 @@ var rooms = [
       "img/standard_room.png",
       "img/standard_room2.png",
       "img/standard_room3.png"
-    ]
-  },
-  {
-    "_id": "5a5a66616c4e9dec10407985",
-    "isAvaliable": false,
-    "picture": "http://placehold.it/32x32",
-    "price": 401,
-    "roomType": "Superior",
-    "bedType": "Queen-size",
-    "roomSize": 36,
-    "imgs": [
-      "img/superior_room.png",
-      "img/superior_room2.png",
-      "img/superior_room3.png"
-    ]
-  },
-  {
-    "_id": "5a5a666194a75c39a4ddfd5b",
-    "isAvaliable": false,
-    "picture": "http://placehold.it/32x32",
-    "price": 161,
-    "roomType": "Deluxe",
-    "bedType": "King-size",
-    "roomSize": 12,
-    "imgs": [
-      "img/deluxe_room.png",
-      "img/deluxe_room2.png",
-      "img/deluxe_room3.png"
     ]
   },
   {
