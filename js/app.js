@@ -28,6 +28,7 @@
 
     router.notFound(function() {
         root.innerHTML = window.Templates.NotFound({ router: router });
+        setActiveMenu(null);
     });
 
     router.route('home', '/', function() {
