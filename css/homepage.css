@@ -43,13 +43,13 @@
 }
 
 .booking-form__name {
-    padding: 0.01em 16px;
+    padding: 1px 16px;
     color: #fff;
     background-color: rgba(117, 143, 24, 1);
 }
 
 .booking-form__data {
-    padding: 0.01em 16px;
+    padding: 1px 16px;
     color: #000;
     background-color: rgba(255, 255, 255, 0.7);
     padding-top: 16px;

@@ -44,7 +44,7 @@
 }
 
 .rooms-description {
-    padding: 0.01em 16px;
+    padding: 0 16px;
     margin-top: 16px;
 }
 
@@ -61,7 +61,7 @@
     justify-content: flex-end;
 }
 
-.rooms__controls>select {
+.rooms__controls > select {
     margin: 0 10px;
 }
 
@@ -116,7 +116,7 @@
 }
 
 .room__description {
-    padding: 0.01em 16px;
+    padding: 0 16px;
     color: #000;
     background-color: rgb(255, 255, 255);
 }
