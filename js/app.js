@@ -118,6 +118,6 @@
 
 function toggleMenubar(event) {
     event.preventDefault();
-    var x = document.getElementById('myMenubar');
-    x.classList.toggle('responsive');
+    var menuElement = document.getElementById('myMenubar');
+    menuElement.classList.toggle('responsive');
 }
